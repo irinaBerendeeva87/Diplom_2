@@ -5,21 +5,11 @@ public class User {
     private String password;
     private String name;
 
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    private String login;
-
-
     public User(String email, String password, String name) {
         this.email = email;
         this.password = password;
         this.name = name;
+
     }
 
     public String getEmail() {

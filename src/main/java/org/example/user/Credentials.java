@@ -1,19 +1,27 @@
 package org.example.user;
 
 public class Credentials {
-    private String login;
+    private String email;
     private String password;
+    private String name;
+
 
     public static Credentials from(User user) {
-        return new Credentials(user.getLogin(), user.getPassword());
+        return new Credentials(user.getEmail(), user.getPassword(),user.getName());
     }
 
-    public String getLogin() {
-        return login;
+    public Credentials(String email, String password, String name) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -24,10 +32,11 @@ public class Credentials {
         this.password = password;
     }
 
-    public Credentials(String login, String password) {
-        this.login = login;
-        this.password = password;
+    public String getName() {
+        return name;
     }
 
-
+    public void setName(String name) {
+        this.name = name;
+    }
 }
