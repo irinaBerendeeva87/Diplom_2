@@ -48,7 +48,7 @@ public class OrderTest {
         ValidatableResponse createOrder = orderClient.createOrderAuthorizedUser(accessToken, order);
         int actualSC = createOrder.extract().statusCode();
         boolean isOrderCreated = createOrder.extract().path("success");
-        assertEquals("Status Code incorrect", actualSC, SC_OK);
+        assertEquals("Status Code incorrect", SC_OK, actualSC);
         assertTrue("Expected true", isOrderCreated);
     }
 
@@ -61,7 +61,7 @@ public class OrderTest {
         ValidatableResponse createOrder = orderClient.createOrderUnauthorizedUser(order);
         int actualSC = createOrder.extract().statusCode();
         boolean isOrderCreated = createOrder.extract().path("success");
-        assertEquals("Status Code incorrect", actualSC, SC_OK);
+        assertEquals("Status Code incorrect", SC_OK,actualSC);
         assertTrue("Expected True", isOrderCreated);
     }
 

@@ -1,5 +1,4 @@
 package usertest.create;
-
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.example.user.User;
@@ -25,20 +24,18 @@ public class UserCreateNegativeParameterizedTest {
         this.statusCode = statusCode;
         this.message = message;
     }
-
     //test data
-@Parameterized.Parameters
+    @Parameterized.Parameters
     public static Object[][] getTestData(){
         return new Object[][]{
                 {UserGenerator.getWithEmailOnly(),SC_FORBIDDEN,"Email, password and name are required fields"},
                 {UserGenerator.getWithPasswordOnly(),SC_FORBIDDEN,"Email, password and name are required fields"}
         };
-}
+    }
 
     @Before
     public void setUp() {
         userClient = new UserClient();
-
     }
 
     @Test

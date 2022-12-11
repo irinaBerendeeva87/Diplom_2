@@ -45,7 +45,6 @@ public class ChangeAuthorizedUserDataTest {
         assertEquals("Status Code incorrect", actualSC, SC_OK);
         assertTrue("Expected true", isUserChangeData);
         assertNotEquals("Expected different name",userOldName, newName);
-
     }
 
     @Test
@@ -62,7 +61,6 @@ public class ChangeAuthorizedUserDataTest {
         assertEquals("Status Code incorrect", actualSC, SC_OK);
         assertTrue("Expected true", isUserChangeData);
         assertNotEquals("Expected different Email", OldEmail, newEmail);
-        userClient.delete(accessToken);
     }
 
     @Test
