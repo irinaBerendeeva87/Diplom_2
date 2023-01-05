@@ -1,4 +1,4 @@
-🚀**API  Stellar.Burgers.**🚀
+🚀**API Stellar.Burgers**🚀
 
 As part of the training, I tested the API of the  Stellar Burgers training service using the JUnit 4, RestAssured and Allure frameworks.
 The project uses Java 11 and used the Maven build system. And the Allure report was generated.
